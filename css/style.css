@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  --dashboard-text-size: 1.6rem;
+  --sidebar-background: #1785d6;
+  --sidebar-font-size: 1.3rem;
+  --sidebar-font-weight: 700;
+  --sidebar-text-color: white;
+
+  --main-content-background: #e1e6f0;
+
+  --username-size: 0.9rem;
+  --username-weight: 600;
+
+  --greeting-size: 0.8rem;
+  --greeting-weight: 600;
+
+  --user-details-size: 1.3rem;
+  --user-details-weight: 600;
+
+  --button-bg-color: #1785d6; 
+  --button-text-color: white;
+  --button-text-size: 0.9rem;
+  --button-text-weight: 600;
+
+  --content-title-size: 1.5rem;
+  --content-title-weight: 500;
+
+  --content-color: #555555;
+
+  --trending-user-size: 0.9rem;
+  --trending-user-weight: 500;
+
+  --trending-size: 0.9rem;
+  --trending-weight: 400;
+
+  --tile-shadow: #ccd0d9;
+}
+
+body {
+  background-color: var(--main-content-background);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  /* grid-template-rows: 1fr 6fr; */
+  /* grid-gap: 8px 8px; */
+  row-gap: 8px;
+  /* min-height: 100vh; */
+}
+
+.sidebar {
+  grid-row: 1 / 3;
+  background-color: var(--sidebar-background);
+  color: var(--sidebar-text-color);
+  font-weight: var(--sidebar-font-weight);
+  font-size: var(--sidebar-font-size);
+  padding: 32px;
+
+  display: grid;
+  grid-template-rows: max-content max-content max-content;
+  row-gap: 64px;
+}
+
+.dashboard {
+  font-size: var(--dashboard-text-size);
+}
+.links1, .links2 {
+  display: grid;
+  row-gap: 24px;
+}
+
+.header {
+  background-color: white;
+  padding: 24px 64px;
+  box-shadow: 12px 0 rgba(170, 180, 194, 0.2);
+}
+
+.first-row {
+  display: grid;
+  grid-template-columns: 1fr 20fr 1fr 2fr 5fr;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.second-row {
+  display: grid;
+  grid-template-columns: 1fr 15fr auto auto auto;
+  align-items: center;
+  justify-items: right;
+}
+
+#search-icon {
+  margin-right: 16px;
+}
+
+#username {
+  font-size: var(--username-size);
+  font-weight: var(--username-weight);
+}
+
+#greeting {
+  font-size: var(--greeting-size);
+  font-weight: var(--greeting-weight);
+}
+
+#user-details {
+  font-size: var(--user-details-size);
+  font-weight: var(--user-details-weight);
+}
+
+#search-bar {
+  background-color: var(--main-content-background);
+  border-radius: 16px;
+  padding: 16px;
+  margin-right: 98px;
+}
+
+#bell-icon, #profile-icon, #username {
+  justify-self: right;
+}
+
+#profile-picture {
+  justify-self: left;
+}
+
+#welcome-text {
+  justify-self: left;
+}
+
+.button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  font-size: var(--button-text-size);
+  font-weight: var(--button-text-weight);
+
+
+  padding: 8px 24px;
+  border-radius: 16px;
+  margin: 8px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+.projects-container {
+  grid-row: 1/3;
+}
+
+.announcements-container {
+}
+
+.trendings-container {
+
+}
+
+.content-title {
+  font-size: var(--content-title-size);
+  font-weight: var(--content-title-weight);
+  margin: 8px;
+}
+
+.content {
+  font-size: var(--trending-size);
+  font-weight: var(--trending-weight);
+  color: var(--content-color);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.project {
+  /* border: 2px solid red; */
+  background-color: white;
+  width: auto;
+  height: 200px;
+}
+
+.announcements-board {
+  background-color: white;
+  padding: 16px;
+}
+
+.announcements {
+  background-color: purple;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr;
+  gap: 1px;
+  /* padding: 16px; */
+}
+
+.announcement {
+  /* border: 2px solid yellow; */
+  background-color: white;
+  padding: 16px;
+  /* border-bottom: 1px solid gray; */
+}
+
+.trendings {
+  /* display: grid; */
+  background-color: white;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.trending {
+  /* border: 2px solid yellow; */
+  background-color: white;
+  /* padding-left: 8px; */
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  /* grid-template-rows: 1fr 1fr ; */
+  gap: 0px 16px;
+  margin: 24px 0px;
+}
+
+.user {
+  font-size: var(--trending-user-size);
+  font-weight: var(--trending-user-weight);
+  align-self: end;
+}
+
+.logo {
+  background: #989898;
+  grid-row: 1/3;
+  /* border: 1px solid red; */
+  height: 32px;
+  width: 32px;
+  border-radius: 100px;
+  justify-self: right;
+  align-self: center;
+}
+
+.card {
+  box-shadow: 5px 5px 5px var(--tile-shadow);
+}
