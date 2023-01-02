@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, Verdana, Calibri, 'Trebuchet MS', sans-serif;
 
   --dashboard-text-size: 1.6rem;
   --sidebar-background: #1785d6;
@@ -24,8 +25,8 @@
   --button-text-size: 0.9rem;
   --button-text-weight: 600;
 
-  --content-title-size: 1.5rem;
-  --content-title-weight: 500;
+  --content-title-size: 1.2rem;
+  --content-title-weight: 550;
 
   --content-color: #555555;
 
@@ -155,7 +156,8 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 16px;
-  padding: 16px;
+  padding: 32px 16px 48px 16px;
+  /* align-items: stretch; */
 }
 
 .projects-container {
@@ -165,13 +167,7 @@ body {
 .content-title {
   font-size: var(--content-title-size);
   font-weight: var(--content-title-weight);
-  margin: 8px;
-}
-
-.content {
-  font-size: var(--trending-size);
-  font-weight: var(--trending-weight);
-  color: var(--content-color);
+  margin-bottom: 8px;
 }
 
 .projects {
@@ -182,8 +178,26 @@ body {
 
 .project {
   background-color: white;
-  width: auto;
-  height: 200px;
+  border-radius: 8px;
+  padding: 32px 24px;
+  height: min(120px, auto);
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+}
+
+.project-title {
+  font-size: var(--content-title-size);
+  font-weight: var(--content-title-weight);
+}
+
+.project-shortcuts {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  grid-gap: 12px;
+}
+
+.project-shortcuts span:first-child {
+  grid-column: 2;
 }
 
 .announcements-board {
@@ -236,6 +250,13 @@ body {
   align-self: center;
 }
 
+.content {
+  font-size: var(--trending-size);
+  font-weight: var(--trending-weight);
+  color: var(--content-color);
+}
+
+
 .card {
   box-shadow: 5px 5px 5px var(--tile-shadow);
 }
@@ -259,5 +280,7 @@ body {
   margin: 0px;
 }
 
-
+.project-icon {
+  height: 24px;
+}
 
