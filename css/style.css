@@ -25,8 +25,10 @@
   --button-text-size: 0.9rem;
   --button-text-weight: 600;
 
-  --content-title-size: 1.2rem;
+  --content-title-size: 1.3rem;
   --content-title-weight: 550;
+  --content-subtitle-size: 1.2rem;
+  --content-subtitle-weight: 600rem;
 
   --content-color: #555555;
 
@@ -157,7 +159,7 @@ body {
   grid-template-columns: 3fr 1fr;
   gap: 16px;
   padding: 32px 16px 48px 16px;
-  /* align-items: stretch; */
+  align-items: stretch;
 }
 
 .projects-container {
@@ -185,9 +187,9 @@ body {
   grid-template-rows: 1fr 4fr 1fr;
 }
 
-.project-title {
-  font-size: var(--content-title-size);
-  font-weight: var(--content-title-weight);
+.project-title, .announcement-title {
+  font-size: var(--content-subtitle-size);
+  font-weight: var(--content-subtitle-weight);
 }
 
 .project-shortcuts {
@@ -203,6 +205,7 @@ body {
 .announcements-board {
   background-color: white;
   padding: 16px;
+  border-radius: 8px;
 }
 
 .announcements {
