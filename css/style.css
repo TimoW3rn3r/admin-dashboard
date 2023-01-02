@@ -204,21 +204,21 @@ body {
 
 .announcements-board {
   background-color: white;
-  padding: 16px;
+  padding: 24px;
   border-radius: 8px;
 }
 
 .announcements {
-  background-color: purple;
+  background-color: var(--main-content-background);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr, 1fr, 1fr;
-  gap: 1px;
+  gap: 2px;
 }
 
 .announcement {
   background-color: white;
-  padding: 16px;
+  padding: 16px 8px;
 }
 
 .trendings {
