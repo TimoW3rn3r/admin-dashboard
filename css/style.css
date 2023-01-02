@@ -44,7 +44,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: max-content 3fr;
   row-gap: 8px;
 }
 
@@ -77,14 +77,13 @@ body {
 
 .first-row {
   display: grid;
-  grid-template-columns: 1fr 20fr 1fr 2fr 5fr;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
-  margin-bottom: 32px;
 }
 
 .second-row {
   display: grid;
-  grid-template-columns: 1fr 15fr auto auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
   justify-items: right;
 }
@@ -93,21 +92,6 @@ body {
   margin-right: 16px;
   height: 24px;
   vertical-align: middle;
-}
-
-#username {
-  font-size: var(--username-size);
-  font-weight: var(--username-weight);
-}
-
-#greeting {
-  font-size: var(--greeting-size);
-  font-weight: var(--greeting-weight);
-}
-
-#user-details {
-  font-size: var(--user-details-size);
-  font-weight: var(--user-details-weight);
 }
 
 #search-bar {
@@ -122,16 +106,34 @@ body {
 }
 
 #profile-icon {
-  justify-self: right;
+  width: 32px;
+  height: auto;
+  margin: 16px;
+  border-radius: 32px;
 }
 
 #username {
+  font-size: var(--username-size);
+  font-weight: var(--username-weight);
   justify-self: left;
-  margin-left: 8px;
+}
+
+#greeting {
+  font-size: var(--greeting-size);
+  font-weight: var(--greeting-weight);
+}
+
+#user-details {
+  font-size: var(--user-details-size);
+  font-weight: var(--user-details-weight);
 }
 
 #profile-picture {
-  justify-self: left;
+  width: 72px;
+  height: auto;
+  margin-right: 16px;
+  border-radius: 64px;
+
 }
 
 #welcome-text {
@@ -143,7 +145,6 @@ body {
   color: var(--button-text-color);
   font-size: var(--button-text-size);
   font-weight: var(--button-text-weight);
-
 
   padding: 8px 24px;
   border-radius: 16px;
