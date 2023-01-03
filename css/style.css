@@ -204,8 +204,9 @@ body {
   grid-column: 2;
 }
 
-.announcements-trendings-wrapper {
-  display: flex-column;
+.announcements-trendings-container {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
