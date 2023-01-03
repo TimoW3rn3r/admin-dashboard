@@ -39,6 +39,7 @@
   --trending-weight: 400;
 
   --tile-shadow: #ccd0d9;
+  --project-card-highlight: #f2bb00;
 }
 
 body {
@@ -267,6 +268,10 @@ body {
 
 .card {
   box-shadow: 5px 5px 5px var(--tile-shadow);
+}
+
+.project.card {
+  box-shadow: -8px 0px 0px var(--project-card-highlight);
 }
 
 .text {
